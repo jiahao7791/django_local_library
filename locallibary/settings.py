@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = 'django-insecure-psb_#pwsr5n8z%6%lt(na4kibbac913@iohdena^t^bdnke@f8'
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'psb_#pwsr5n8z%6%lt(na4kibbac913@iohdena^t^bdnke@f8')
 
-export DJANGO_DEBUG=False
+
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
