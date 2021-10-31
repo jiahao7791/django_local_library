@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Author List</h1>
+  {% if author_list %}
+  <ul>
+    {% for author in author_list %}
+      <li>
+        <a href="{{ author.get_absolute_url }}">{{ author }}</a> ({{author}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no authors yet.</p>
+  {% endif %}
+{% endblock %}
+
+
+first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    date_of_birth = models.DateField(null=True,blank=True)
+    date_of_death = models.DateField('Died',null=True,blank=True)
